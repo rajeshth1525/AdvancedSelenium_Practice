@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<!-- Edge Browser Excecution(2Test cases)-->
+  <test thread-count="5" name="EdgeTest">
+   <parameter name="BROWSER" value="edge"></parameter>
+   <parameter name="URL" value="https://www.saucedemo.com/"></parameter>
+   <parameter name="USERNAME" value="standard_user"></parameter>
+   <parameter name="PASSWORD" value="secret_sauce"></parameter>
+    <classes>
+      <class name="Parameters_CrossBrowserTesting.AddProdToCartTest"></class>
+      <class name="Parameters_CrossBrowserTesting.HandlingDropDownLowProdTest"></class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <!-- FIrefox Browser Excecution (3 Test case will run) -->
+  <test thread-count="5" name="FireFoxTest">
+   <parameter name="BROWSER" value="firefox"></parameter>
+   <parameter name="URL" value="https://www.saucedemo.com/"></parameter>
+   <parameter name="USERNAME" value="standard_user"></parameter>
+   <parameter name="PASSWORD" value="secret_sauce"></parameter>
+    <classes>
+      <class name="Parameters_CrossBrowserTesting.HandlingDropdownZtoATest"></class>
+     <!-- <class name="Parameters_CrossBrowserTesting.LockedUserLoginTest"></class>-->
+      <class name="Parameters_CrossBrowserTesting.MultipleProductsAddToCartTest"></class>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

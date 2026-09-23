@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GroupSuite">
+  <test thread-count="5" name="smokeregressiongroupTest">
+       <groups>
+         <run>
+         <include name="smoke"></include>
+         <include name="regression"></include>
+         </run>
+       </groups>
+   <classes>
+      <class name="GroupSuite.AddProdToCartTest"></class>
+      <class name="GroupSuite.HandlingDropDownLowProdTest"></class>
+      <class name="GroupSuite.HandlingDropdownZtoATest"></class>
+      <class name="GroupSuite.MultipleProductsAddToCartTest"></class>
+      <class name="GroupSuite.LockedUserLoginTest"></class>  
+   </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

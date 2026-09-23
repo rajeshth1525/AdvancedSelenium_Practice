@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ParaMeterSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="BROWSER" value="Edge"/>
+    <parameter name="PASSWORD" value="secret_sauce"/>
+    <parameter name="USERNAME" value="standard_user"/>
+    <parameter name="URL" value="https://www.saucedemo.com/"/>
+    <classes>
+      <class name="Parameters.HandlingDropDownLowProdTest">
+        <methods>
+          <include name="HandlingDropDownLowProd"/>
+          <include name="launchBrowser"/>
+          <include name="loginApp"/>
+          <include name="beforetest"/>
+          <include name="logoutApp"/>
+          <include name="afterSuite"/>
+          <include name="afterTest"/>
+          <include name="closeBrowser"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- Parameters.HandlingDropDownLowProdTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [ParaMeterSuite] -->

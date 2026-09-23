@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+<!-- Suite level thread-count = 5 → All 5 test cases will run in parallel -->
+  <test thread-count="5" parallel="tests" name="ParellelTest">
+    <classes>
+      <class name="Smoke_Regression_Group_Parellel.LockedUserLoginTest"/>
+      <class name="Smoke_Regression_Group_Parellel.HandlingDropdownZtoATest"/>
+      <class name="Smoke_Regression_Group_Parellel.MultipleProductsAddToCartTest"/>
+      <class name="Smoke_Regression_Group_Parellel.AddProdToCartTest"/>
+      <class name="Smoke_Regression_Group_Parellel.HandlingDropDownLowProdTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
